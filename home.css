@@ -1,0 +1,431 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 10px;
+  
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  font-size: 20px;
+
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: .2s ease-out;
+  width: 18px;
+}
+
+
+
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+
+
+  h1 {
+    font-size: 13px;
+    color: #FFA500;
+    /* Orange text */
+    margin: 20px 0;
+  }
+}
+
+/* contener home page */
+.h2 {
+  text-align: center;
+  padding: 70px 15px;
+
+  background: linear-gradient(135deg,  orange 60%, rgb(1, 74, 74));
+
+
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.platform-buttons {
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+
+.buttons button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1%;
+}
+
+.buttons button:hover {
+  background-color: #013b79;
+}
+
+
+
+/* Basic styling for the language switcher */
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  background: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(251, 1, 1, 0.1);
+  z-index: 1;
+  font-size: 10px;
+}
+
+.language-dropdown a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.language-dropdown a:hover {
+  background: #f1f1f1;
+}
+
+.language-dropdown img {
+  width: 15px;
+  height: 15px;
+  margin-right: 1px;
+  vertical-align: middle;
+}
+
+.show {
+  display: block;
+}
+
+
+
+    /* Custom CSS for the slider */
+    .slider {
+      position: relative;
+     height: 500px;
+      max-width: 100%; /* Adjust as needed */
+     border-radius: 8px;
+      overflow: hidden;
+      margin: 0 auto; /* Center the slider */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f4f4f4; /* Background color for the slider */
+      border: 1px solid #ddd; /* Border for the slider */
+      border-radius: 10px; /* Rounded corners */
+      padding: 10px; /* Padding around the images */
+      box-sizing: border-box; /* Include padding in the element's total width and height */
+      animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+   
+     
+      
+     
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%; /* Adjust as needed */
+      display: none; /* Hide all images by default */
+      position: absolute;
+     
+     
+    }
+
+    .slider img.active {
+      display: block; /* Show the active image */
+      animation: slideIn 3ms ease-in-out; /* Slide animation */
+    }
+
+    /* Slide animation */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Navigation buttons */
+    .slider-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slider-nav button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .slider-nav button:hover {
+      background-color: #0056b3;
+    }
+    .reading{
+      text-align: center;
+      padding: 70px 15px;
+      font-size: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    /* <!-- footer Section --> */
+    /* Base Styles */
+.website-footer {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-grid {
+  display: flex;
+  gap: 40px;
+}
+.Support-section{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.newsletter-form input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
+  
+}
+
+.newsletter-form button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #555;
+  font-size: 20px;
+  
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.footer-projects {
+  margin-top: 10px;
+}
+
+.footer-projects a {
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+}
